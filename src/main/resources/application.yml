@@ -1,0 +1,19 @@
+server:
+  port: 8091
+spring:
+  kafka:
+    #生产者
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    bootstrap-servers: 192.168.221.131:9092
+    #消费者
+    consumer:
+      bootstrap-servers: 192.168.221.131:9092
+      group-id: hyson
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+#kafka的主题
+kafka:
+  topic: hyson
